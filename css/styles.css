@@ -1,6 +1,15 @@
 p {
   font-size: 1.25rem;
   line-height: 2rem;
+  color: #161616;
+}
+
+body {
+  background-color: #E5E3D2;
+}
+
+h1 {
+  color: #161616;
 }
 
 /* HERO IMAGE STYLES */
@@ -17,7 +26,7 @@ p {
 }
 
 .hero-image:hover {
-  transform: scale(1.03);
+  transform: scale(1.01);
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
 }
 
@@ -30,39 +39,52 @@ p {
 /* NAV BAR STYLES - Sleek and Dark */
 .simple-nav {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  background-color: #2C2C2C; /* Dark background for sophistication */
+  background-color: #161616;
   padding: 10px 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* More pronounced shadow for depth */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.branding p {
+  color: #E5E3D2;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-left: 20px;
 }
 
 .simple-nav a {
-  color: #CFCFCF; /* Light grey text for contrast */
+  color: #E5E3D2;
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 18px;
-  margin: 0 10px;
-  border-radius: 5px; /* Keeping rounded corners */
+  font-size: 1.5rem;
+  margin: 0 15px;
+  border-radius: 5px;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .simple-nav a:hover, .simple-nav a:focus {
-  background-color: #5624d0; /* Purple background on hover/focus for accent */
-  color: #FFFFFF; /* White text for readability */
-  border-radius: 5px; /* Ensuring consistency */
+  background-color: #AECACD;
+  color: #000;
 }
 
 .nav-item.active {
-  background-color: #5624d0; /* Purple for active item background */
-  color: #FFFFFF; /* White for active item text color */
+  background-color: #FF5B19;
+  color: #E5E3D2;
+}
+
+/* Add this to ensure .nav-links and its children are aligned properly */
+.nav-links {
+  display: flex; /* This ensures the links inside the div are inline */
+  justify-content: flex-end; /* Aligns the links to the right */
 }
 
 /* BLOG POST STYLES */
 .blog-post {
-  border-bottom: 2px solid #eee; /* Light grey border for a subtle divider */
-  margin-bottom: 40px; /* Spacing between posts */
-  padding-bottom: 20px; /* Spacing above the divider */
+  border-bottom: 2px solid #1616161a;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 /* Last post should not have a border at the bottom */
@@ -70,10 +92,31 @@ p {
   border-bottom: none;
 }
 
+/* NAV BUTTON STYLES */
+.hamburger-menu {
+  display: none; /* Hidden by default */
+  font-size: 40px;
+  color: #E5E3D2;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 15px;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .simple-nav {
+    padding: 0px;
+  }
+  
   .simple-nav a {
-      padding: 10px 15px;
-      font-size: 16px;
+    font-size: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .branding p {
+    font-size: 1.5rem;
   }
 }
